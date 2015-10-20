@@ -1,0 +1,21 @@
+/* CSS Document */
+
+.widget_imoveis div{
+	overflow:hidden;
+	border:0;
+	min-width:200px;
+}
+#shader{
+	background-color:rgba(0,0,0,0.64);
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#shader .img-detalhe{
+	max-width:500px;
+	max-height:500px;
+	margin:20px;
+}
