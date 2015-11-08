@@ -1,0 +1,27 @@
+﻿@model Imobiliaria.Models.TipoImovel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoImovel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeTipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.TipoImovelID }) |
+    @Html.ActionLink("Ver Todos", "Index") |
+    @Html.ActionLink("Criar Sub-Tipo", "Create", new { id = Model.TipoImovelID })
+</p>

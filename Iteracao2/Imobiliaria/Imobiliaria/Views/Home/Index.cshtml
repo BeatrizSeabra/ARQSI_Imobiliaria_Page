@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Início";
+}
+
+<div class="jumbotron">
+    <h1>Imobiliária</h1>
+    <p class="lead">O maior portal Imobiliário do ISEP</p>
+    <p>Ou um projeto para a unidade curricular de ARQSI</p>
+</div>
+
+@if (User.IsInRole("Cliente"))
+{
+    <div class="container">
+        <h4>Bem vindo(a)!</h4>
+        @if (ViewBag.alertas != null)
+        {
+            <h2>Os seus Alertas</h2>
+            <div class="row">
+                @foreach (var alerta in ViewBag.alertas)
+                {
+                    <div class="col-md-4 col-xs-12">
+                        Colocar aqui dados do @alerta
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <h2>Não tem alertas disponíveis!</h2>
+        }
+
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Projeto por</h2>
+            <p>Beatriz Seabra</p>
+            <p>1120268 - 3DH</p>
+        </div>
+        <div class="col-md-8">
+            <h2>Os melhores imóveis pelo melhor preço</h2>
+            <p>Aqui poderá encontrar estes e outros imóveis fantásticos a preços que parecem fictícios!</p>
+            <script type="text/javascript">
+                var places = ["widget-it1"];
+            </script>
+            <div id="widget-it1" style="width: 100%; height: 300px;"></div>
+            <p>Os nossos utilizadores podem consultar e criar anúncios, definir alertas e muito, muito mais.</p>
+        </div>
+    </div>
+    <script src="http://www.dmoura.com/Bia/widget_procura/widget.js"> </script>
+}
